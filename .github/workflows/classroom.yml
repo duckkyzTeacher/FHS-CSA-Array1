@@ -1,0 +1,260 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: firstLast6Test
+      id: firstlast6Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: firstLast6Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.firstLast6Test
+        timeout: 10
+        max-score: 2
+    - name: commonEndTest
+      id: commonendTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: commonEndTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.commonEndTest
+        timeout: 10
+        max-score: 2
+    - name: reverse3Test
+      id: reverse3Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: reverse3Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.reverse3Test
+        timeout: 10
+        max-score: 2
+    - name: middleWayTest
+      id: middlewayTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: middleWayTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.middleWayTest
+        timeout: 10
+        max-score: 2
+    - name: no23Test
+      id: no23Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: no23Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.no23Test
+        timeout: 10
+        max-score: 2
+    - name: fix23Test
+      id: fix23Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: fix23Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.fix23Test
+        timeout: 10
+        max-score: 2
+    - name: makeMiddleTest
+      id: makemiddleTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: makeMiddleTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.makeMiddleTest
+        timeout: 10
+        max-score: 2
+    - name: midThreeTest
+      id: mythreeTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: midThreeTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.midThreeTest
+        timeout: 10
+        max-score: 2
+    - name: unlucky1Test
+      id: unlucky1Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: unlucky1Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.unlucky1Test
+        timeout: 10
+        max-score: 2
+    - name: sameFirstLastTest
+      id: samefirstlastTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: sameFirstLastTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.sameFirstLastTest
+        timeout: 10
+        max-score: 2
+    - name: sum3Test
+      id: sum3Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: sum3Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.sum3Test
+        timeout: 10
+        max-score: 2
+    - name: maxEnd3Test
+      id: maxend3Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: maxEnd3Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.maxEnd3Test
+        timeout: 10
+        max-score: 2
+    - name: makeEndsTest
+      id: makeendsTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: makeEndsTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.makeEndsTest
+        timeout: 10
+        max-score: 2
+    - name: makeLastTest
+      id: makelastTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: makeLastTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.makeLastTest
+        timeout: 10
+        max-score: 2
+    - name: start1Test
+      id: start1Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: start1Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.start1Test
+        timeout: 10
+        max-score: 2
+    - name: plusTwoTest
+      id: plusTwoTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: plusTwoTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.plusTwoTest
+        timeout: 10
+        max-score: 2
+    - name: maxTripleTest
+      id: maxtripleTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: maxTripleTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.maxTripleTest
+        timeout: 10
+        max-score: 2
+    - name: make2Test
+      id: make2Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: make2Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.make2Test
+        timeout: 10
+        max-score: 2
+    - name: makePiTest
+      id: makepiTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: makePiTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.makePiTest
+        timeout: 10
+        max-score: 2
+    - name: rotateLeft3Test
+      id: rotateleft3Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: rotateLeft3Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.rotateLeft3Test
+        timeout: 10
+        max-score: 2
+    - name: sum2Test
+      id: sum2Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: sum2Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.sum2Test
+        timeout: 10
+        max-score: 2
+    - name: has23Test
+      id: has23Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: has23Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.has23Test
+        timeout: 10
+        max-score: 2
+    - name: double23Test
+      id: double23Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: double23Test
+        setup-command: ''
+        command: gradle test --tests TestArray1.double23Test
+        timeout: 10
+        max-score: 2
+    - name: biggerTwoTest
+      id: biggerTwoTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: biggerTwoTest
+        setup-command: ''
+        command: gradle test --tests TestArray1.biggerTwoTest
+        timeout: 10
+        max-score: 2
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        FIRSTLAST6TEST_RESULTS: "${{steps.firstlast6Test.outputs.result}}"
+        COMMONENDTEST_RESULTS: "${{steps.commonendTest.outputs.result}}"
+        REVERSE3TEST_RESULTS: "${{steps.reverse3Test.outputs.result}}"
+        MIDDLEWAYTEST_RESULTS: "${{steps.middlewayTest.outputs.result}}"
+        NO23TEST_RESULTS: "${{steps.no23Test.outputs.result}}"
+        FIX23TEST_RESULTS: "${{steps.fix23Test.outputs.result}}"
+        MAKEMIDDLETEST_RESULTS: "${{steps.makeMiddleTest.outputs.result}}"
+        MIDTHREETEST_RESULTS: "${{steps.midThreeTest.outputs.result}}"
+        UNLUCKY1TEST_RESULTS: "${{steps.unlucky1Test.outputs.result}}"
+        SAMEFIRSTLASTTEST_RESULTS: "${{steps.sameFirstLastTest.outputs.result}}"
+        SUM3TEST_RESULTS: "${{steps.sum3Test.outputs.result}}"
+        MAXEND3TEST_RESULTS: "${{steps.maxEnd3Test.outputs.result}}"
+        MAKEENDSTEST_RESULTS: "${{steps.makeEndsTest.outputs.result}}"
+        MAKELASTTEST_RESULTS: "${{steps.makeLastTest.outputs.result}}"
+        START1TEST_RESULTS: "${{steps.start1Test.outputs.result}}"
+        PLUSTWOTEST_RESULTS: "${{steps.plusTwoTest.outputs.result}}"
+        MAXTRIPLETEST_RESULTS: "${{steps.maxTripleTest.outputs.result}}"
+        MAKE2TEST_RESULTS: "${{steps.make2Test.outputs.result}}"
+        MAKEPITEST_RESULTS: "${{steps.makePiTest.outputs.result}}"
+        ROTATELEFT3TEST_RESULTS: "${{steps.rotateLeft3Test.outputs.result}}"
+        SUM2TEST_RESULTS: "${{steps.sum2Test.outputs.result}}"
+        HAS23TEST_RESULTS: "${{steps.has23Test.outputs.result}}"
+        DOUBLE23TEST_RESULTS: "${{steps.double23Test.outputs.result}}"
+        BIGGERTWOTEST_RESULTS: "${{steps.biggerTwoTest.outputs.result}}"
+      with:
+        runners: firstlast6Test,commonEndTest,reverse3Test,middleWayTest,no23Test,fix23Test,makeMiddleTest,midThreeTest,unlucky1Test,sameFirstLastTest,sum3Test,maxEnd3Test,makeEndsTest,makeLastTest,start1Test,plusTwoTest,maxTripleTest,make2Test,makePiTest,rotateLeft3Test,sum2Test,has23Test,double23Test,biggerTwoTest
