@@ -18,49 +18,50 @@ public class Array1 {
     }
 
     /**
-     * Return the array in reverse order.
+     * Return the array (size 3) in reverse order.
      */
     public int[] reverse3(int[] nums) {
         return new int[0]; // Placeholder return
     }
 
     /**
-     * Return a new array of the middle elements of the input arrays.
+     * Given 2 arrays of length 3, return a new array of the middle elements of the input arrays.
      */
     public int[] middleWay(int[] a, int[] b) {
         return new int[0]; // Placeholder return
     }
 
     /**
-     * Return true if the array does not contain a 2 next to a 3.
+     * Return true if the array (size 2) does not contain a 2 next to a 3.
      */
     public boolean no23(int[] nums) {
         return false; // Placeholder return
     }
 
     /**
-     * Return a new array where the first occurrence of {2, 3} is changed to {2, 0}.
+     * Given an int array of size 3, if there is a 2 followed by a 3, change the 3 to a 0.
      */
     public int[] fix23(int[] nums) {
         return new int[0]; // Placeholder return
     }
 
     /**
-     * Return a new array of the middle two elements of the input array.
+     * Given an array with an even length, return a new array containing the 2 middle elements
      */
     public int[] makeMiddle(int[] nums) {
         return new int[0]; // Placeholder return
     }
 
     /**
-     * Return a new array of the middle three elements of the input array.
+     * Given an array with an odd length, return a new array of the middle three elements of the input array.
      */
     public int[] midThree(int[] nums) {
         return new int[0]; // Placeholder return
     }
 
     /**
-     * Return true if the array contains an unlucky 1.
+     * 1's are unlucky if they are followed by a 3.
+     * Return true if the array contains an unlucky 1 in the first 2 or last 2 positions
      */
     public boolean unlucky1(int[] nums) {
         return false; // Placeholder return
