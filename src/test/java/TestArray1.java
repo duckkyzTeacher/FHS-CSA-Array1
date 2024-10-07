@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
  * The test class Array1Test. Dont edit or it will mess up your grade :)
  *
  * @author Mr. Johnson
- * @version 9/18/24 v1 (a version number or a date)
+ * @version 10/7/24 v1.5 (a version number or a date)
  */
 
 public class Array1Test {
@@ -21,62 +21,62 @@ public class Array1Test {
     public void firstLast6Test() {
         assertEquals(true, array1.firstLast6(new int[]{6, 1, 2}));
         assertEquals(true, array1.firstLast6(new int[]{1, 2, 6}));
-        assertEquals(false, array1.firstLast6(new int[]{1, 2, 3}));
+        assertEquals(false, array1.firstLast6(new int[]{1, 6, 3}));
     }
 
     @Test
     public void commonEndTest() {
         assertEquals(true, array1.commonEnd(new int[]{1, 2, 3}, new int[]{7, 3}));
-        assertEquals(false, array1.commonEnd(new int[]{1, 2, 3}, new int[]{7, 8}));
-        assertEquals(true, array1.commonEnd(new int[]{1, 2, 3}, new int[]{1, 7}));
+        assertEquals(false, array1.commonEnd(new int[]{1, 2, 3}, new int[]{3, 2}));
+        assertEquals(true, array1.commonEnd(new int[]{1, 2, 3}, new int[]{1, 3}));
     }
 
     @Test
     public void reverse3Test() {
         assertArrayEquals(new int[]{3, 2, 1}, array1.reverse3(new int[]{1, 2, 3}));
         assertArrayEquals(new int[]{9, 8, 7}, array1.reverse3(new int[]{7, 8, 9}));
-        assertArrayEquals(new int[]{1, 2, 3}, array1.reverse3(new int[]{3, 2, 1}));
+        assertArrayEquals(new int[]{7, 0, 0}, array1.reverse3(new int[]{0, 0, 7}));
     }
 
     @Test
     public void middleWayTest() {
         assertArrayEquals(new int[]{2, 5}, array1.middleWay(new int[]{1, 2, 3}, new int[]{4, 5, 6}));
-        assertArrayEquals(new int[]{2, 4}, array1.middleWay(new int[]{1, 2, 3, 4}, new int[]{5, 6, 7, 8}));
-        assertArrayEquals(new int[]{2, 6}, array1.middleWay(new int[]{1, 2, 3}, new int[]{5, 6, 7}));
+        assertArrayEquals(new int[]{7, 6}, array1.middleWay(new int[]{7, 7, 7}, new int[]{5, 6, 8}));
+        assertArrayEquals(new int[]{6, 4}, array1.middleWay(new int[]{5, 6, 3}, new int[]{9, 4, 5}));
     }
 
     @Test
     public void no23Test() {
-        assertEquals(false, array1.no23(new int[]{1, 2, 3}));
-        assertEquals(true, array1.no23(new int[]{1, 4, 5}));
-        assertEquals(true, array1.no23(new int[]{1, 2, 4}));
+        assertEquals(true, array1.no23(new int[]{4, 5}));
+        assertEquals(false, array1.no23(new int[]{3, 4}));
+        assertEquals(true, array1.no23(new int[]{4, 9}));
     }
 
     @Test
     public void fix23Test() {
-        assertArrayEquals(new int[]{1, 0, 4}, array1.fix23(new int[]{1, 2, 3, 4}));
-        assertArrayEquals(new int[]{1, 2, 4}, array1.fix23(new int[]{1, 2, 4}));
+        assertArrayEquals(new int[]{1, 2, 0}, array1.fix23(new int[]{1, 2, 3}));
+        assertArrayEquals(new int[]{2, 0, 5}, array1.fix23(new int[]{2, 3, 5}));
         assertArrayEquals(new int[]{1, 3, 2}, array1.fix23(new int[]{1, 3, 2}));
     }
 
     @Test
     public void makeMiddleTest() {
         assertArrayEquals(new int[]{2, 3}, array1.makeMiddle(new int[]{1, 2, 3, 4}));
-        assertArrayEquals(new int[]{3, 4}, array1.makeMiddle(new int[]{1, 2, 3, 4, 5}));
-        assertArrayEquals(new int[]{2, 3}, array1.makeMiddle(new int[]{1, 2, 3}));
+        assertArrayEquals(new int[]{3, 4}, array1.makeMiddle(new int[]{1, 2, 3, 4, 5, 10}));
+        assertArrayEquals(new int[]{5, 7}, array1.makeMiddle(new int[]{5, 7}));
     }
 
     @Test
     public void midThreeTest() {
         assertArrayEquals(new int[]{2, 3, 4}, array1.midThree(new int[]{1, 2, 3, 4, 5}));
-        assertArrayEquals(new int[]{2, 3, 4}, array1.midThree(new int[]{7, 2, 3, 4, 6}));
-        assertArrayEquals(new int[]{2, 3, 4}, array1.midThree(new int[]{1, 2, 3}));
+        assertArrayEquals(new int[]{7, 5, 3}, array1.midThree(new int[]{1, 7, 7, 5, 3, 6, 6}));
+        assertArrayEquals(new int[]{1, 2, 3}, array1.midThree(new int[]{1, 2, 3}));
     }
 
     @Test
     public void unlucky1Test() {
-        assertEquals(true, array1.unlucky1(new int[]{1, 2, 1}));
-        assertEquals(false, array1.unlucky1(new int[]{1, 2, 3}));
+        assertEquals(true, array1.unlucky1(new int[]{1, 3, 4, 5}));
+        assertEquals(true, array1.unlucky1(new int[]{2, 1, 3, 4, 5}));
         assertEquals(false, array1.unlucky1(new int[]{1, 1, 1}));
     }
 
@@ -84,7 +84,7 @@ public class Array1Test {
     public void sameFirstLastTest() {
         assertEquals(true, array1.sameFirstLast(new int[]{1, 2, 3, 1}));
         assertEquals(false, array1.sameFirstLast(new int[]{1, 2, 3}));
-        assertEquals(true, array1.sameFirstLast(new int[]{1, 1}));
+        assertEquals(true, array1.sameFirstLast(new int[]{1, 2, 1}));
     }
 
     @Test
