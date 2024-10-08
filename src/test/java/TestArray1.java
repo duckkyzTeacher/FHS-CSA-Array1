@@ -138,9 +138,9 @@ public class Array1Test {
 
     @Test
     public void make2Test() {
-        assertArrayEquals(new int[]{1, 2}, array1.make2(new int[]{1, 2, 3}));
-        assertArrayEquals(new int[]{1, 2}, array1.make2(new int[]{1}));
-        assertArrayEquals(new int[]{4, 5}, array1.make2(new int[]{4, 5}));
+        assertArrayEquals(new int[]{4, 5}, array1.make2(new int[]{4, 5}, new int[]{1, 2, 3}));
+        assertArrayEquals(new int[]{4, 1}, array1.make2(new int[]{4}, new int[]{1, 2, 3}));
+        assertArrayEquals(new int[]{2, 9}, array1.make2(new int[]{}, new int[]{2, 9}));
     }
 
     @Test
@@ -152,21 +152,22 @@ public class Array1Test {
     public void rotateLeft3Test() {
         assertArrayEquals(new int[]{2, 3, 1}, array1.rotateLeft3(new int[]{1, 2, 3}));
         assertArrayEquals(new int[]{8, 9, 7}, array1.rotateLeft3(new int[]{7, 8, 9}));
-        assertArrayEquals(new int[]{1, 2, 3}, array1.rotateLeft3(new int[]{1, 2, 3}));
+        assertArrayEquals(new int[]{8, 5, 3}, array1.rotateLeft3(new int[]{3, 8, 5}));
     }
 
     @Test
     public void sum2Test() {
         assertEquals(3, array1.sum2(new int[]{1, 2, 3}));
         assertEquals(15, array1.sum2(new int[]{7, 8, 9}));
-        assertEquals(0, array1.sum2(new int[]{0}));
+        assertEquals(6, array1.sum2(new int[]{6}));
+        assertEquals(0, array1.sum2(new int[]{}));
     }
 
     @Test
     public void has23Test() {
-        assertEquals(true, array1.has23(new int[]{1, 2, 3}));
-        assertEquals(false, array1.has23(new int[]{1, 4, 5}));
-        assertEquals(false, array1.has23(new int[]{1, 5, 6}));
+        assertEquals(true, array1.has23(new int[]{2, 3}));
+        assertEquals(true, array1.has23(new int[]{4, 3}));
+        assertEquals(false, array1.has23(new int[]{5, 6}));
     }
 
     @Test
@@ -178,9 +179,9 @@ public class Array1Test {
 
     @Test
     public void biggerTwoTest() {
-        assertEquals(true, array1.biggerTwo(new int[]{1, 2}, new int[]{1, 3}));
-        assertEquals(false, array1.biggerTwo(new int[]{1, 3}, new int[]{1, 2}));
-        assertEquals(true, array1.biggerTwo(new int[]{5, 6}, new int[]{4, 7}));
+        assertEquals(new int[]{3,4}, array1.biggerTwo(new int[]{1, 2}, new int[]{3, 4}));
+        assertEquals(new int[]{3,4}, array1.biggerTwo(new int[]{3, 4}, new int[]{1, 2}));
+        assertEquals(new int[]{1,2}, array1.biggerTwo(new int[]{1, 1}, new int[]{1, 2}));
     }
 
     @Test
@@ -193,14 +194,14 @@ public class Array1Test {
     @Test
     public void frontPieceTest() {
         assertArrayEquals(new int[]{1, 2}, array1.frontPiece(new int[]{1, 2, 3}));
-        assertArrayEquals(new int[]{1, 2, 3}, array1.frontPiece(new int[]{1, 2, 3, 4}));
+        assertArrayEquals(new int[]{1, 3}, array1.frontPiece(new int[]{1, 3, 2, 4}));
         assertArrayEquals(new int[]{1}, array1.frontPiece(new int[]{1}));
     }
 
     @Test
     public void front11Test() {
-        assertArrayEquals(new int[]{1}, array1.front11(new int[]{1, 2, 3}, new int[]{4, 5, 6}));
-        assertArrayEquals(new int[]{1}, array1.front11(new int[]{1}, new int[]{2}));
-        assertArrayEquals(new int[]{1}, array1.front11(new int[]{1, 2, 3}, new int[]{1, 4, 5}));
+        assertArrayEquals(new int[]{1, 4}, array1.front11(new int[]{1, 2, 3}, new int[]{4, 5, 6}));
+        assertArrayEquals(new int[]{1, 2}, array1.front11(new int[]{1}, new int[]{2}));
+        assertArrayEquals(new int[]{1}, array1.front11(new int[]{1, 7}, new int[]{}));
     }
 }
