@@ -82,10 +82,12 @@ public class Array1 {
     }
 
     /**
-     * Return the maximum of the first or last element of the array.
+     * Given an array of ints length 3, figure out which is larger, the first or last element in the array, 
+     * and set all the other elements to be that value. Return the changed array.
      */
-    public int maxEnd3(int[] nums) {
-        return 0; // Placeholder return
+    public int[] maxEnd3(int[] nums) {
+        int[3] output = [0,0,0];
+        return output; // Placeholder return
     }
 
     /**
@@ -96,7 +98,10 @@ public class Array1 {
     }
 
     /**
-     * Return a new array of length 1 with the last element of the input array.
+     * Given an int array, return a new array with double the length where its last element 
+     * is the same as the original array, and all the other elements are 0. 
+     * The original array will be length 1 or more. 
+     * Note: by default, a new int array contains all 0's.
      */
     public int[] makeLast(int[] nums) {
         return new int[0]; // Placeholder return
@@ -111,6 +116,7 @@ public class Array1 {
 
     /**
      * Return a new array consisting of the elements from two arrays combined.
+     * the return should be as if a and b are concatinated
      */
     public int[] plusTwo(int[] a, int[] b) {
         return new int[0]; // Placeholder return
@@ -124,9 +130,11 @@ public class Array1 {
     }
 
     /**
-     * Return a new array consisting of the first two elements of the input array.
+     * Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, 
+     * the elements from a followed by the elements from b. 
+     * The arrays may be any length, including 0, but there will be 2 or more elements available between the 2 arrays.
      */
-    public int[] make2(int[] nums) {
+    public int[] make2(int[] a, int[] b) {
         return new int[0]; // Placeholder return
     }
 
