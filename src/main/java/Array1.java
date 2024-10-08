@@ -147,20 +147,22 @@ public class Array1 {
 
     /**
      * Return a new array with elements rotated left by 3 positions.
+     * So {1, 2 ,3} returns {2, 3, 1}
      */
     public int[] rotateLeft3(int[] nums) {
         return new int[0]; // Placeholder return
     }
 
     /**
-     * Return the sum of the first two elements of the array.
+     * Given an array of ints, return the sum of the first 2 elements in the array. 
+     * If the array length is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.
      */
     public int sum2(int[] nums) {
         return 0; // Placeholder return
     }
 
     /**
-     * Return true if the array contains a 2 next to a 3.
+     * Return true if the array contains a 2 or a 3.
      */
     public boolean has23(int[] nums) {
         return false; // Placeholder return
@@ -174,10 +176,12 @@ public class Array1 {
     }
 
     /**
-     * Return true if the array is sorted in increasing order.
+     * Start with 2 int arrays, a and b, each length 2. 
+     * Consider the sum of the values in each array. Return the array which has the largest sum. 
+     * In event of a tie, return a.
      */
-    public boolean biggerTwo(int[] a, int[] b) {
-        return false; // Placeholder return
+    public int[] biggerTwo(int[] a, int[] b) {
+        return new int[0]; // Placeholder return
     }
 
     /**
@@ -188,15 +192,17 @@ public class Array1 {
     }
 
     /**
-     * Return a new array consisting of the first two elements of the input array.
+     * Given an int array of any length, return a new array of its first 2 elements. 
+     * If the array is smaller than length 2, use whatever elements are present.
      */
     public int[] frontPiece(int[] nums) {
         return new int[0]; // Placeholder return
     }
 
     /**
-     * Return a new array consisting of the first 1 elements of the input array.
-     */
+    * Given 2 int arrays, a and b, of any length, return a new array with the first element of each array. 
+    * If either array is length 0, ignore that array.
+    */
     public int[] front11(int[] a, int[] b) {
         return new int[0]; // Placeholder return
     }
