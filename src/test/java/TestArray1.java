@@ -96,9 +96,9 @@ public class Array1Test {
 
     @Test
     public void maxEnd3Test() {
-        assertEquals(3, array1.maxEnd3(new int[]{1, 2, 3}));
-        assertEquals(7, array1.maxEnd3(new int[]{7, 5, 6}));
-        assertEquals(1, array1.maxEnd3(new int[]{1, 2, 1}));
+        assertEquals(new int[]{3,3,3}, array1.maxEnd3(new int[]{1, 2, 3}));
+        assertEquals(new int[]{7,7,7}, array1.maxEnd3(new int[]{7, 5, 6}));
+        assertEquals(new int[]{1,1,1}, array1.maxEnd3(new int[]{1, 2, 1}));
     }
 
     @Test
@@ -110,30 +110,30 @@ public class Array1Test {
 
     @Test
     public void makeLastTest() {
-        assertArrayEquals(new int[]{3, 3, 3}, array1.makeLast(new int[]{1, 2, 3}));
-        assertArrayEquals(new int[]{5, 5, 5, 5}, array1.makeLast(new int[]{5, 4, 6, 7}));
-        assertArrayEquals(new int[]{1}, array1.makeLast(new int[]{1}));
+        assertArrayEquals(new int[]{0, 0, 0, 0, 0, 3}, array1.makeLast(new int[]{1, 2, 3}));
+        assertArrayEquals(new int[]{0, 0, 0, 7}, array1.makeLast(new int[]{6, 7}));
+        assertArrayEquals(new int[]{0, 1}, array1.makeLast(new int[]{1}));
     }
 
     @Test
     public void start1Test() {
         assertEquals(2, array1.start1(new int[]{1, 2, 3}, new int[]{1, 4, 5}));
-        assertEquals(1, array1.start1(new int[]{1, 2}, new int[]{2, 1}));
-        assertEquals(0, array1.start1(new int[]{2, 3}, new int[]{4, 5}));
+        assertEquals(1, array1.start1(new int[]{1, 2}, new int[]{2}));
+        assertEquals(0, array1.start1(new int[]{2, 3}, new int[]{}));
     }
 
     @Test
     public void plusTwoTest() {
         assertArrayEquals(new int[]{1, 2, 3, 4}, array1.plusTwo(new int[]{1, 2}, new int[]{3, 4}));
-        assertArrayEquals(new int[]{1, 2}, array1.plusTwo(new int[]{1}, new int[]{2}));
-        assertArrayEquals(new int[]{7, 8, 9}, array1.plusTwo(new int[]{7, 8}, new int[]{9}));
+        assertArrayEquals(new int[]{1, 3, 2, 4}, array1.plusTwo(new int[]{1, 3}, new int[]{2, 4}));
+        assertArrayEquals(new int[]{9, 2, 3, 4}, array1.plusTwo(new int[]{9, 2}, new int[]{3, 4}));
     }
 
     @Test
     public void maxTripleTest() {
         assertEquals(3, array1.maxTriple(new int[]{1, 2, 3}));
-        assertEquals(7, array1.maxTriple(new int[]{7, 5, 6}));
-        assertEquals(4, array1.maxTriple(new int[]{4, 1, 2, 3}));
+        assertEquals(7, array1.maxTriple(new int[]{7}));
+        assertEquals(4, array1.maxTriple(new int[]{4, 1, 2, 3, 2, 3, 1, 1, 2, 3, 0}));
     }
 
     @Test
