@@ -86,7 +86,7 @@ public class Array1 {
      * and set all the other elements to be that value. Return the changed array.
      */
     public int[] maxEnd3(int[] nums) {
-        int[3] output = [0,0,0];
+        int[] output = new int[3];
         return output; // Placeholder return
     }
 
