@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
  * @version 10/7/24 v1.5 (a version number or a date)
  */
 
-public class Array1Test {
+public class TestArray1 {
 
     Array1 array1 = new Array1();
 
