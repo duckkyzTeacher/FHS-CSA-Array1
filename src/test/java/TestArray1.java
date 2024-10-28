@@ -48,7 +48,7 @@ public class TestArray1 {
     @Test
     public void no23Test() {
         assertEquals(true, array1.no23(new int[]{4, 5}));
-        assertEquals(false, array1.no23(new int[]{3, 4}));
+        assertEquals(false, array1.no23(new int[]{2, 3}));
         assertEquals(true, array1.no23(new int[]{4, 9}));
     }
 
@@ -96,9 +96,9 @@ public class TestArray1 {
 
     @Test
     public void maxEnd3Test() {
-        assertEquals(new int[]{3,3,3}, array1.maxEnd3(new int[]{1, 2, 3}));
-        assertEquals(new int[]{7,7,7}, array1.maxEnd3(new int[]{7, 5, 6}));
-        assertEquals(new int[]{1,1,1}, array1.maxEnd3(new int[]{1, 2, 1}));
+        assertArrayEquals(new int[]{3,3,3}, array1.maxEnd3(new int[]{1, 2, 3}));
+        assertArrayEquals(new int[]{7,7,7}, array1.maxEnd3(new int[]{7, 5, 6}));
+        assertArrayEquals(new int[]{1,1,1}, array1.maxEnd3(new int[]{1, 2, 1}));
     }
 
     @Test
@@ -179,9 +179,9 @@ public class TestArray1 {
 
     @Test
     public void biggerTwoTest() {
-        assertEquals(new int[]{3,4}, array1.biggerTwo(new int[]{1, 2}, new int[]{3, 4}));
-        assertEquals(new int[]{3,4}, array1.biggerTwo(new int[]{3, 4}, new int[]{1, 2}));
-        assertEquals(new int[]{1,2}, array1.biggerTwo(new int[]{1, 1}, new int[]{1, 2}));
+        assertArrayEquals(new int[]{3,4}, array1.biggerTwo(new int[]{1, 2}, new int[]{3, 4}));
+        assertArrayEquals(new int[]{3,4}, array1.biggerTwo(new int[]{3, 4}, new int[]{1, 2}));
+        assertArrayEquals(new int[]{1,2}, array1.biggerTwo(new int[]{1, 1}, new int[]{1, 2}));
     }
 
     @Test
